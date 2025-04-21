@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Afterclass Project 26</title>
+    </head>
+    <body>
+        <h2>Afterclass Project</h2>
+        <p id="details"></p>
+        <script>
+            class Car {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+
+                present() {
+ 
+                    return 'I have a ' + this.carname;
+                }
+            }
+
+            class Model extends Car {
+                constructor(brand, mod) {
+                    super(brand);
+                    this.model = mod;
+                }
+
+                show() {
+                    return this.present() + ', it is a ' + this.model;
+
+                }
+            }
+
+            myCar = new Model("Ford", "Mustang");
+            document.getElementById("details").innerHTML = myCar.show();
+        </script>
+    </body>
+</html>
