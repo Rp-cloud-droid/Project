@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Afterclass Project 27</title>
+    </head>
+    <body>
+        <h2>Afterclass Project 27</h2>
+        <button onclick="ascending()">Ascending Order</button>
+        <button onclick="descending()">Descending Order</button>
+        <p id="result"></p>
+        <script>
+            var points = [25, 56, 72, 8, 37, 12];
+            document.getElementById("result").innerHTML = points;
+            function ascending() {
+                points.sort(function(a, b){return a - b});
+                document.getElementById("result").innerHTML = points;
+            }
+            function descending() {
+                points.sort(function(a, b){return b - a});
+                document.getElementById("result").innerHTML = points;
+            }
+        </script>
+    </body>
+</html>
