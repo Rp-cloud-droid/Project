@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname "].value;
+                if (x == "") {
+                    alert("Name must befilled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Validation</h2>
+        <form name="myForm" onsubmit="validatForm()">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+
+        <h2>Number Validation</h2>
+        <input id="idl" type="number" min="13" max="19" required>
+        <button onclick="myFunction()">OK</button>
+        <p id="result"></p>
+        <script>
+            function myFunction() {
+            var inpObj = document.getElementById("idl");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("result").innerHTML = "Input OK";
+            }
+        }
+        </script>
+    </body>
+</html>
